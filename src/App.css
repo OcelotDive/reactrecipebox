@@ -1,0 +1,148 @@
+.App {
+  position: absolute;
+  text-align: center;
+  background: aqua;
+  height: 100%;
+  width: 100%;
+  overflow: scroll; }
+
+.cardContainer {
+  width: 48%;
+  height: 100%;
+  margin-top: 2%;
+  margin-left: 26%;
+  overflow: hidden; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+.App-title {
+  font-size: 600%;
+  font-family: 'Homemade Apple', cursive;
+  white-space: nowrap; }
+
+#recipecontainer {
+  position: relative;
+  margin: 1.5%;
+  width: 200px;
+  height: 281px;
+  z-index: 1;
+  float: left; }
+
+#recipecontainer {
+  perspective: 1000; }
+
+#recipecard {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+  border-radius: 5%;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */ }
+
+#recipecontainer:active #recipecard {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa; }
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: black;
+  border-radius: 5%; }
+
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+  border-radius: 5%; }
+
+.recipeImage {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  margin: 5%;
+  width: 90%;
+  height: 40%;
+  border-radius: 5%; }
+
+.addButton {
+  margin-top: 0.5%; }
+
+.addContainerOff, .addContainerOn {
+  position: absolute;
+  left: 39.5%;
+  top: 25%;
+  z-index: -3;
+  background: white;
+  opacity: 0;
+  width: 20%;
+  height: 40%;
+  transition: 1s;
+  border-radius: 2%;
+  margin: 1%;
+  height: auto; }
+
+.addContainerOn {
+  z-index: 20;
+  transition: 1.5s;
+  opacity: 1; }
+
+.clear {
+  clear: both; }
+
+.recipeNameBox, .recipeImageBox {
+  margin: 2%;
+  margin-left: 0.5%;
+  width: 100%; }
+
+.addIngredientButton, .deleteIngredientButton {
+  margin: 4%;
+  float: left; }
+
+.addRecipeButton {
+  margin-bottom: 3%; }
+
+.removeButton {
+  background-color: blue;
+  color: #fff; }
+
+.recipeName, .recipeClickBlock {
+  position: absolute;
+  color: #ffffff;
+  top: 48%;
+  width: 100%;
+  text-align: center; }
+
+.recipeClickBlock {
+  top: 60%;
+  border: solid white 2px;
+  margin: 5%;
+  height: 30%;
+  width: 90%;
+  line-height: 550%; }
+
+.ingredientList {
+  text-align: left; }
+
+/*# sourceMappingURL=app.css.map */
