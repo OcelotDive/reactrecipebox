@@ -47,11 +47,11 @@ class App extends Component {
     
     decreaseCards(index) {
         let temp = ls('storedInfo')
-        
-        for (let i = 0; i < temp.length; i++){
+        alert(index)
+        for (let i = temp.length; i--;){
            
                if(index === temp[i][0]){
-                      temp.splice(temp[i], 1);                 
+                      temp.splice(i, 1);                 
                                        }
         }
         ls('storedInfo', temp)
