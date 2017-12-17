@@ -15,7 +15,7 @@ $border: solid 1px red;
     height: 100%;
     margin-top: 2%;
     margin-left: 26%;
-    overflow: hidden;
+   
 }
 
 
@@ -45,7 +45,8 @@ $border: solid 1px red;
 }
 #recipecontainer {
   perspective: 1000;
-    
+-webkit-perspective: 1000;
+  
 }
 #recipecard {
   width: 100%;
@@ -61,8 +62,10 @@ $border: solid 1px red;
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */ 
 }
+
 #recipecontainer:active #recipecard {
   transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
   box-shadow: -5px 5px 5px #aaa;
 }
 .face {
@@ -70,12 +73,14 @@ $border: solid 1px red;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     background: black;
      border-radius: 5%;
 }
 .face.back {
   display: block;
   transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
   box-sizing: border-box;
   padding: 10px;
   color: white;
